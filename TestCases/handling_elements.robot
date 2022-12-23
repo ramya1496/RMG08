@@ -9,6 +9,7 @@ TC1
     open browser    https://demowebshop.tricentis.com/      Chrome
     maximize browser window
 
+    #get text = It will give the text present in the given xpath
     ${get_text}=    get text        //div[@class="block block-category-navigation"]
     log to console      ${get_text}
     sleep   2
@@ -48,14 +49,14 @@ ${url}      https://demowebshop.tricentis.com/
 ${browser}      Chrome
 
 *** Test Cases ***
-Categories text
+Categories text     #To get the text of all elements in left navigation bar
     Open My browser
     ${get_text}=    get text        //div[@class="block block-category-navigation"]
     log to console      ${get_text}
     sleep   2
     close browser
 
-Footer text
+Footer text     #To get the text of all links in the footer
     Open My browser
     ${get_text}=    get text        //div[@class="footer-menu-wrapper"]
     log to console      ${get_text}

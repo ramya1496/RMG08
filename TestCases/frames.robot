@@ -29,6 +29,12 @@ Handling frames
     sleep   2
     click link   Help
     sleep   3
+
+    #to refresh the page
+    reload page
+
+    sleep   3
+
     close browser
 
 *** Keywords ***

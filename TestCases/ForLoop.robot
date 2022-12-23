@@ -36,23 +36,52 @@
 #    END
 
 #################################################
+#*** Settings ***
+#
+#
+#*** Variables ***
+#@{list_elements}    python  java    c   perl
+#
+#
+#*** Test Cases ***
+##Loop
+##    FOR     ${ele}      IN      python  java    c   perl
+##        log to console      ${ele}
+##    END
+#
+#Loop
+#    FOR     ${ele}      IN      @{list_elements}
+#        log to console      ${ele}
+#    END
+
+#########################################################
 *** Settings ***
 
 
 *** Variables ***
-@{list_elements}    python  java    c   perl
 
 
 *** Test Cases ***
-#Loop
-#    FOR     ${ele}      IN      python  java    c   perl
-#        log to console      ${ele}
-#    END
+Create List and loop
+    @{list_1}=      create list     python  selenium    c   java
 
-Loop
-    FOR     ${ele}      IN      @{list_elements}
-        log to console      ${ele}
-    END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
