@@ -48,13 +48,14 @@ LoginCredentials
     [Arguments]     ${email_id}      ${password}
     open browser        ${url}      ${browser}
     maximize browser window
-    input text      id:Email        ${email_id}
+    input text      id:Email
+
     input text      id:Password     ${password}
     click element   xpath://button[text()="Log in"]
 
 
 
-pip install --upgrade robotframework-datadriver[XLS]
+pip install --upgrade robotframework-datadriver[XLSX]
 
 
 
